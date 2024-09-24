@@ -6,6 +6,20 @@
     font-family: cursive;
 }
 
+.header h1 a img {
+    margin-right: 15px;
+}
+
 .header .active {
     pointer-events: none;
+}
+
+.header img {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
 }
