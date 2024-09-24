@@ -1,0 +1,11 @@
+.header h1 {
+    font-size: 48px;
+}
+
+.header h1 a {
+    font-family: cursive;
+}
+
+.header .active {
+    pointer-events: none;
+}

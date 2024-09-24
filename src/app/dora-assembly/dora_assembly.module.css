@@ -1,0 +1,39 @@
+.dora_assemblyPage .gameField {
+    width: 600px;
+    margin: 35px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dora_assemblyPage .gameField button {
+    margin-top: 15px;
+    padding: 1%;
+    width: 250px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid gray;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.dora_assemblyPage .gameField button:hover, .dora_assemblyPage .gameField button:focus {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+    .dora_assemblyPage .gameField {
+        width: 350px;
+    }
+
+    .dora_assemblyPage .gameField img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .dora_assemblyPage .gameField button {
+        font-size: 18px;
+        width: 150px;
+    }
+}

@@ -1,0 +1,35 @@
+.find_emojiPage h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.find_emojiPage h2 span:last-child {
+    color: rgba(128, 128, 128, 0.7);
+}
+
+.find_emojiPage .gameField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 35px auto;
+    width: 1300px;
+}
+
+.find_emojiPage .gameField div {
+    cursor: pointer;
+    font-size: 30px;
+    width: 40px;
+}
+
+.find_emojiPage .gameField div:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+    .find_emojiPage .gameField {
+        justify-content: space-between;
+        width: 350px;
+    }
+}
