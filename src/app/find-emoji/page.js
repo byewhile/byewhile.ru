@@ -5,6 +5,7 @@ import styles from "./find_emoji.module.css";
 
 export default function find_emoji() {
     const [level, setLevel] = useState(1);
+    const [color, setColor] = useState("gray");
     const [correctEmoji, setCorrectEmoji] = useState("");
     const [emojisInGame, setEmojisInGame] = useState([]);
 
@@ -17,12 +18,23 @@ export default function find_emoji() {
     }
 
     useEffect(() => {
-        let prepareEmojisInGame = ["😂", "🤣", "😥", "😢", "🙄", "🤤", "😭", "🥺", "👿", "🥰", "😉", "😊", "😘", "😲", "😀", "😈", "😠"];
+        let prepareEmojisInGame = ["😂", "🤣", "😥", "😢", "🙄", "🤤", "😭", "🥺", "👿", "🥰", "😉", "😊", "😘", "😲", "😀", "😈", "🫠"];
+
+        if (level >= 10) {
+            prepareEmojisInGame.push("👌", "🤘", "🤞", "🤙", "👍", "👏", "🙌", "✍", "🤏", "🤌", "✌", "🤟", "👆", "👇", "☝", "🫵");
+            setColor("green");
+        }
+        if (level >= 20) {
+            setColor("red");
+        }
+        if (level >= 30) {
+            setColor("pink");
+        }
         shuffle(prepareEmojisInGame);
         const prepareCorrectEmoji = prepareEmojisInGame.shift();
 
-        for (let i = 0; i < level; i++) {
-        prepareEmojisInGame = prepareEmojisInGame.concat(prepareEmojisInGame);
+        for (let i = 0; i <= level / 5; i++) {
+            prepareEmojisInGame = prepareEmojisInGame.concat(prepareEmojisInGame);
         }
         prepareEmojisInGame[0] = prepareCorrectEmoji;
         shuffle(prepareEmojisInGame);
@@ -33,7 +45,7 @@ export default function find_emoji() {
   
   return (
     <main className={styles.find_emojiPage}>
-        <h2><span>Найди: {correctEmoji}</span><span>Уровень: {level}</span></h2>
+        <h2><span>Найди: {correctEmoji}</span><span style={{color: color}}>Уровень: {level}</span></h2>
         <div className={styles.gameField}>
             {emojisInGame.map((emoji, index) => (
                 <div key={index}>
