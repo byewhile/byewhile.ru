@@ -17,8 +17,8 @@ export default function Home() {
     <main className={styles.homePage}>
       {pages.map(page => (
         <Link key={page.url} href={page.url}>
-            <div>
-                <span>{page.title}</span>
+            <div className={styles.gameBlock}>
+                <span className={styles.gameTitle}>{page.title}</span>
             </div>
         </Link>
       ))}

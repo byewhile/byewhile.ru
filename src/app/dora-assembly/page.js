@@ -44,7 +44,6 @@ export default function dora_assembly() {
     return (
         <main className={styles.dora_assemblyPage}>
             <h2>Сборка Доры</h2>
-
             <div className={styles.gameField}>
                 {imgsInGameRow1.map((img, index) => (
                     <Image key={index} src={img} alt={index} priority />
@@ -56,11 +55,11 @@ export default function dora_assembly() {
                     <Image key={index} src={img} alt={index} priority />
                 ))}
                 {inGame ? 
-                <button onClick={startGame} disabled>Кнопка</button> 
+                <button onClick={startGame} className={styles.startGameButton} disabled>Кнопка</button> 
                 : 
-                <button onClick={startGame}>Кнопка</button>
+                <button onClick={startGame} className={styles.startGameButton}>Кнопка</button>
                 }
             </div>
         </main>
-  )
+    )
 }

@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 
-.find_emojiPage .gameField {
+.gameField {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,18 +13,18 @@
     width: 1300px;
 }
 
-.find_emojiPage .gameField div {
+.emoji {
     cursor: pointer;
     font-size: 30px;
     width: 40px;
 }
 
-.find_emojiPage .gameField div:hover {
+.emoji:hover {
     transform: scale(1.05);
 }
 
 @media screen and (max-width: 480px) {
-    .find_emojiPage .gameField {
+    .gameField {
         justify-content: space-between;
         width: 350px;
     }

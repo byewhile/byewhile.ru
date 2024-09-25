@@ -4,7 +4,7 @@
     gap: 25px;
 }
 
-.homePage div {
+.gameBlock {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,11 +16,11 @@
     transition: ease all 0.3s;
 }
 
-.homePage div span {
+.gameTitle {
     font-size: 26px;
 }
 
-.homePage a:hover div, .homePage a:focus div {
+.homePage a:hover .gameBlock, .homePage a:focus .gameBlock {
     transform: scale(1.01);
 }
 
@@ -29,7 +29,7 @@
         flex-direction: column;
     }
 
-    .homePage div {
+    .gameBlock {
         width: 100%;
     }
 }

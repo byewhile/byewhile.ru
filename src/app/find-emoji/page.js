@@ -48,7 +48,7 @@ export default function find_emoji() {
         <h2><span>Найди: {correctEmoji}</span><span style={{color: color}}>Уровень: {level}</span></h2>
         <div className={styles.gameField}>
             {emojisInGame.map((emoji, index) => (
-                <div key={index}>
+                <div key={index} className={styles.emoji}>
                 {correctEmoji == emoji ?
                     <span onClick={levelUp}>{emoji}</span>
                 :
