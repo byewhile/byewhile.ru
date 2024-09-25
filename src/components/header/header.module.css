@@ -2,20 +2,17 @@
     font-size: 48px;
 }
 
-.header h1 a {
+.header a {
     font-family: cursive;
 }
 
-.header h1 a img {
+.header img {
     margin-right: 15px;
+    animation: spin 5s linear infinite;
 }
 
 .header .active {
     pointer-events: none;
-}
-
-.header img {
-    animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
