@@ -15,7 +15,9 @@ import doraImg8 from "@/public/8.png";
 import doraImg9 from "@/public/9.png";
 
 export default function dora_assembly() {
-    const [imgsInGame, setImgsInGame] = useState([doraImg1, doraImg2, doraImg3, doraImg4, doraImg5, doraImg6, doraImg7, doraImg8, doraImg9]);
+    const [imgsInGameRow1, setImgsInGameRow1] = useState([doraImg1, doraImg2, doraImg3]);
+    const [imgsInGameRow2, setImgsInGameRow2] = useState([doraImg4, doraImg5, doraImg6]);
+    const [imgsInGameRow3, setImgsInGameRow3] = useState([doraImg7, doraImg8, doraImg9]);
     const [inGame, setInGame] = useState(false);
 
     const shuffle = (array) => {
@@ -27,11 +29,12 @@ export default function dora_assembly() {
         setInGame(true);
 
         const spinning = setInterval(() => {
-            setImgsInGame(shuffle([...imgsInGame]));
+            setImgsInGameRow1(shuffle([...imgsInGameRow1]));
+            setImgsInGameRow2(shuffle([...imgsInGameRow2]));
+            setImgsInGameRow3(shuffle([...imgsInGameRow3]));
             numberOfRepeat++;
 
             if (numberOfRepeat == 5) {
-                numberOfRepeat = 0;
                 setInGame(false);
                 clearInterval(spinning);
             }
@@ -43,13 +46,14 @@ export default function dora_assembly() {
             <h2>Сборка Доры</h2>
 
             <div className={styles.gameField}>
-                {imgsInGame.map((img, index) => (
-                    <Image
-                        key={index}
-                        src={img}
-                        alt={index}
-                        priority
-                    />
+                {imgsInGameRow1.map((img, index) => (
+                    <Image key={index} src={img} alt={index} priority />
+                ))}
+                {imgsInGameRow2.map((img, index) => (
+                    <Image key={index} src={img} alt={index} priority />
+                ))}
+                {imgsInGameRow3.map((img, index) => (
+                    <Image key={index} src={img} alt={index} priority />
                 ))}
                 {inGame ? 
                 <button onClick={startGame} disabled>Кнопка</button> 
