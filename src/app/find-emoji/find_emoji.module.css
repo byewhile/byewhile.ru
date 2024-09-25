@@ -4,10 +4,6 @@
     justify-content: space-between;
 }
 
-.find_emojiPage h2 span:last-child {
-    color: rgba(128, 128, 128, 0.7);
-}
-
 .find_emojiPage .gameField {
     display: flex;
     flex-wrap: wrap;
