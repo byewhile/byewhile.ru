@@ -9,8 +9,12 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "byewhile",
-  description: "byewhile - byewhile",
+  title: "byewhile.ru",
+  description: "Игры и прочие странности.",
+  keywords: "byewhile, Найди emoji, Сборка Доры",
+  alternates: {
+    canonical: "https://byewhile.ru",
+  },
 };
 
 export default function RootLayout({ children }) {
