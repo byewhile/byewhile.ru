@@ -10,7 +10,7 @@ const roboto = Roboto({
 
 export const metadata = {
   title: "byewhile.ru",
-  description: "Игры и прочие странности.",
+  description: "Не только захватывающие игры, но и множество других странностей, которые удивят и вдохновят вас!",
   keywords: "byewhile, Найди emoji, Сборка Доры",
   alternates: {
     canonical: "https://byewhile.ru",
