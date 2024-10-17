@@ -1,5 +1,9 @@
 .header {
     height: 80px;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 .header h1 {
