@@ -18,7 +18,7 @@ export default function find_emoji() {
     }
 
     useEffect(() => {
-        let prepareEmojisInGame = ["😂", "🤣", "😥", "😢", "🙄", "🤤", "😭", "🥺", "👿", "🥰", "😉", "😊", "😘", "😲", "😀", "😈", "🫠"];
+        let prepareEmojisInGame = ["😂", "🤣", "😥", "😢", "🙄", "🤤", "😭", "🥺", "👿", "🥰", "😉", "😊", "😘", "😲", "😀", "😈", "😁"];
 
         if (level >= 10) {
             prepareEmojisInGame.push("👌", "🤘", "🤞", "🤙", "👍", "👏", "🙌", "✍", "🤏", "🤌", "✌", "🤟", "👆", "👇", "☝", "🫵");
