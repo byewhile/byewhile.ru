@@ -1,23 +1,37 @@
 .homePage {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
+    width: 800px;
+    margin: 20px auto;
 }
 
 .gameBlock {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 360px;
     height: 150px;
     border-radius: 15px;
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-    padding: 1%;
     transition: ease all 0.3s;
+    overflow: hidden;
+}
+
+.gameBlock img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
 }
 
 .gameTitle {
-    font-size: 26px;
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2  px black;
 }
 
 .homePage a:hover .gameBlock, .homePage a:focus .gameBlock {
@@ -26,6 +40,7 @@
 
 @media screen and (max-width: 480px) {
     .homePage {
+        width: auto;
         flex-direction: column;
     }
 
