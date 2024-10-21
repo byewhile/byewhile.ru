@@ -1,6 +1,14 @@
+.dora_assemblyPage select {
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
 .gameField {
     width: 600px;
-    margin: 35px auto;
+    margin: 20px auto;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -23,6 +31,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .dora_assemblyPage h2 {
+        text-align: center;
+    }
+    
     .gameField {
         width: 350px;
     }

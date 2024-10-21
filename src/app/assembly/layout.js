@@ -1,5 +1,5 @@
 export const metadata = {
-    title: "Сборка Доры",
+    title: "Сборка",
 }
 
 export default function ClientLayout({ children }) {
